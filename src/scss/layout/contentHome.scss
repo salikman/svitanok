@@ -1,0 +1,208 @@
+.serveces {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+
+    &-item {
+        &__title {
+            margin-bottom: rem(20);
+            font-family: 'gotham';
+            font-size: rem(35);
+            font-weight: 900;
+
+            @include media(991) {
+                font-size: rem(25);
+            }
+
+            a {
+                color: black;
+
+                &:hover {
+                    color: #5268e9;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &__description {
+            margin-bottom: rem(15);
+            line-height: 1.5;
+        }
+
+        &__more {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
+            border-radius: rem(45);
+            padding: rem(11) rem(28);
+            background: transparent;
+            color: black;
+            border: rem(2) solid #5268e9;
+            font-size: rem(22);
+
+            &:hover {
+                color: #5268e9;
+            }
+
+            @include media(991) {
+                font-size: rem(16);
+            }
+        }
+    }
+}
+
+.news {
+    margin-bottom: 60px;
+
+    &__title {
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'gotham';
+        font-size: rem(35);
+        font-weight: 900;
+
+        @include media(991) {
+            font-size: rem(25);
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include media(991) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+
+        &__img {
+            position: relative;
+            padding-bottom: 60%;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__date {
+            padding: rem(20) rem(10);
+            color: #9c9b9b;
+            text-align: center;
+            font-size: rem(14);
+        }
+
+        &__info {
+            flex: 1;
+            padding: 0 rem(10);
+
+            a {
+                display: flex;
+                color: black;
+                text-align: center;
+                font-size: rem(24);
+                font-weight: 400;
+
+                &:hover {
+                    color: #5268e9;
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                padding: rem(10) 0;
+                font-weight: 300;
+                line-height: 150%;
+            }
+        }
+
+        &__more {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            margin: rem(10) auto rem(20);
+            color: #5268e9;
+
+            &:hover {text-decoration: underline;}
+        }
+    }
+}
+
+.block-text {
+    margin-bottom: rem(60);
+
+    &__title {
+        margin-bottom: rem(20);
+        text-align: center;
+        font-family: 'gotham';
+        font-size: rem(35);
+        font-weight: 700;
+
+        @include media(991) {
+            font-size: rem(25);
+        }
+    }
+
+    &__text {
+        margin-bottom: rem(16);
+        line-height: 150%;
+    }
+}
+
+.loc-order {
+    &__title {
+        margin-bottom: rem(20);
+        text-align: center;
+        font-family: 'gotham';
+        font-size: rem(35);
+        font-weight: 700;
+
+        @include media(991) {
+            font-size: rem(25);
+        }
+    }
+
+    &__desc {
+        margin-bottom: rem(20);
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+        padding: 70px 50px;
+
+        @include media(991) {
+            grid-template-columns: 1fr;
+            padding: 35px 25px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .name {
+            text-align: center;
+            font-size: rem(26);
+            font-weight: 500;
+
+            @include media(991) {
+                font-size: rem(18);
+            }
+        }
+    }
+}

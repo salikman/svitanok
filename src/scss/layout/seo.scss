@@ -1,0 +1,18 @@
+.primary-text {
+    padding: 50px 0 35px;
+    background: url('../images/header-bg.png') center/cover no-repeat;
+    font-family: "Comfortaa", cursive;
+    font-weight: 400;
+
+    .text-center {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        line-height: 1.2;
+
+        p, span, a, strong {
+            color: #2f4dce;
+        }
+    }
+}

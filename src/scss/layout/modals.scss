@@ -1,0 +1,76 @@
+.modal-window {
+    display: none;
+    max-width: 500px;
+    padding: 30px;
+}
+
+.modal-window h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+}
+
+.modal-window ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+
+
+}
+
+.modal-window ul li {
+    margin-bottom: 15px;
+    width: calc(100% / 2);
+
+    a {
+        font-size: 18px;
+        color: #000;
+    }
+
+    i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: $firstAccentColor;
+    }
+}
+
+.request-call p {
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 10px;
+}
+
+.modal-window .form input[type="text"], 
+.modal-window .form input[type="tel"], 
+.modal-window .form textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border: 1px solid rgba(black, .1);
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.modal-window .form input[type="text"]:focus, 
+.modal-window .form input[type="tel"]:focus, 
+.modal-window .form textarea:focus {
+    border: 1px solid rgba($firstAccentColor, .5);
+    transition: ease 1s;
+}
+
+.modal-window .form input[type="submit"] {
+    /* opacity: 0.4; */
+    width: 100%;
+    padding: 12px;
+    font-size: 13px;
+    color: #FFF;
+    text-shadow: #000 0px 1px 2px;
+    background: rgba($firstAccentColor, .9);
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
