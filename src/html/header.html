@@ -1,31 +1,55 @@
 <header class="header">
+  <div class="header-top">
+    <div class="header__container">
+      <a class="header__email" href="mailto:kievperevod2010@ukr.net">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 4C21.6569 4 23 5.34315 23 7V17C23 18.6569 21.6569 20 20 20H4C2.34315 20 1 18.6569 1 17V7C1 5.34315 2.34315 4 4 4H20ZM19.2529 6H4.74718L11.3804 11.2367C11.7437 11.5236 12.2563 11.5236 12.6197 11.2367L19.2529 6ZM3 7.1688V17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17V7.16882L13.8589 12.8065C12.769 13.667 11.231 13.667 10.1411 12.8065L3 7.1688Z" fill="#1A2041"/>
+        </svg>
+        <span>kievperevod2010@ukr.net</span>
+      </a>
+      <ul class="header__phones">
+        <li><a href="#">(+38) (067)323-08-93</a></li>
+        <li><a href="#">(+38) (066)424-29-31</a></li>
+        <li><a href="#">(+38) (066)424-29-31</a></li>
+      </ul>
+      <address class="header__address">Адрес: г. Киев, ул Крещатик, 46</address>
+      <span class="header__works">Рабочее время: Пн - Пт с 11.00 до 17.00</span>
+    </div>
+  </div>
   <div class="header__container">
     <div class="header__logo logo">
       <a href="#" class="logo__link">
         <img src="@img/logo.png" alt="" class="logo__img">
       </a>
       <div class="logo__title">
-        <span>Бюро переводов «Світанок»</span>
-        <p><strong>Адрес:</strong> 01001, Киев Крещатик, 46 <a href="#"><i class="fa fa-location-dot"></i>На карте</a></p>
+        <span>Світанок</span>
+        <p>Бюро переводов</p>
       </div>
     </div>
     <nav class="header__menu menu">
       <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link">КОНТАКТЫ</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Цены</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">о нас</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Наши Услуги</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">О Нас</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Цены</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
       </ul>
     </nav>
-    <a href="#popPhone" class="header__phone" data-fancybox><i class="fa fa-phone"></i></a>
     <div class="header__lang lang">
-      <div class="lang__current"><i class="fa fa-globe"></i> <span>UA</span></div>
-      <ul class="lang__dropdown">
-        <li><a href="#">UA</a></li>
-        <li><a href="#">RU</a></li>
-      </ul>
+      <div>
+        <span>
+          Ru
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+            <path d="M1 1L7 7L13 1" stroke="#1A2041"/>
+          </svg>
+        </span>
+        <ul>
+          <li class=" lang-item"><a href="/">Ru</a></li>
+          <li class=" lang-item"><a href="/">Ua</a></li>
+        </ul>
+      </div>
     </div>
+    <a href="#popPhone" class="header__phone" data-fancybox><i class="fa fa-phone"></i> Связаться</a>
     @@include('./iconMenu.html', {})
   </div>
 </header>

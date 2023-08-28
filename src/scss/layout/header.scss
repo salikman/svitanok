@@ -1,8 +1,14 @@
 // =====================================================================================================================
 .header {
+  position: relative;
   width: 100%;
   background: white;
   box-shadow: 0 0 1px rgba(0,0,0,0.75);
+
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   &.sticky {
     position: fixed;
@@ -12,32 +18,106 @@
     width: 100%;
     transition: $standartTrans;
   }
+
   // .header__container
   &__container {
-    height: rem($headerHeight);
+    position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &-top {
+    background: rgba(237, 237, 237, 0.90);
+
+    @media (max-width: 991px) {
+      background: $firstAccentColor;
+      color: white;
+    }
+
+    .header__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
+    }
+  }
+
+  &__email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      color: $fioColor;
+    }
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__phones {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 62px;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 52px;
+      height: 24px;
+      background: url('../images/phones.png') no-repeat center / contain;
+    }
+
+    @media (max-width: 1320px) {display: none;}
+  }
+
+  &__address, &__works, &__phones, &__email {
+    font-size: 14px;
+    font-style: normal;
   }
 
   &__logo {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+
+    @media (max-width: 991px) {order: 1;}
   }
 
   &__menu {
-    margin-left: auto;
+    @media (min-width: 992px) {
+      margin-left: auto;
+      margin-right: 2%;
+    }
   }
 
   &__phone {
     display: flex;
     align-items: center;
-    height: rem($headerHeight);
-    padding: 0 20px;
+    gap: 10px;
+    padding: 11px 30px;
+    background: $firstAccentColor;
+    border-radius: 50px;
     transition: $standartTrans;
-    color: black;
+    color: white;
 
     i {
+      color: white;
       transition: $standartTrans;
       font-size: 20px;
     }
@@ -48,16 +128,25 @@
       i {color: white;}
     }
 
-    @include media(1365) {
-      padding: 0 rem(10);
-    }
-    @include media(991) {
+    @media (max-width: 991px) {
+      order: 2;
+      gap: 0;
       margin-left: auto;
+      margin-right: 10px;
+      padding: 10px;
+      background: transparent;
+      font-size: 0;
+
+      i {color: $firstAccentColor;}
     }
   }
 
   &__lang {
+    margin-right: 2%;
 
+    @media (max-width: 991px) {
+      order: 3;
+    }
   }
 }
 // =====================================================================================================================
@@ -66,6 +155,7 @@
 .icon-menu {
   display: none;
   @include media(991) {
+    order: 4;
     display: block;
     position: relative;
     width: rem(30);

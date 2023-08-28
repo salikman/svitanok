@@ -24,8 +24,10 @@ import {
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 var swiper = new Swiper(".address-slider", {
+  modules: [Pagination],
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 });
 
