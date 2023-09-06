@@ -8,7 +8,9 @@
       @@include('html/header.html', {})
       <main class="page">
         <div data-observ></div>
-        @@include('html/pageHome/seo.html')
+        @@include('html/pageHome/intro.html')
+        @@include('html/pageHome/offerta.html')
+        @@include('html/pageHome/info.html')
 
         <div class="row">
           <div class="row__container">
@@ -19,6 +21,8 @@
             @@include('html/sidebar.html')
           </div>
         </div>
+
+        @@include('html/pageHome/reviews.html')
       </main>
       @@include('html/footer.html', {})
       @@include('html/modals/pop-phone.html')

@@ -1,0 +1,79 @@
+.fare {
+    margin-bottom: 40px;
+
+    &__title {
+        margin-bottom: 50px;
+        color: #1376C2;
+        text-align: center;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 560px) {
+            grid-template-columns: 1fr;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 16px 12px;
+            border-radius: 20px;
+            border: 1px solid #E7E9F7;
+
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+            }
+
+            h4 {
+                height: 58px;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding-left: 20px;
+
+                li {
+                    list-style: disc;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 130%;
+                }
+            }
+
+            a {
+                margin-left: 10px;
+                color: #1376C2;
+                font-size: 15px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
